@@ -1,0 +1,172 @@
+
+nav a:hover,
+nav button:hover {
+    color: rgba(255, 255, 255, 0.6); /* Dimming effect with slightly reduced opacity */
+}
+
+.navbar li.button,
+.navbar a {
+    color: white;
+    text-decoration: none; /* Remove default underline for links */
+    position: relative; 
+}
+
+.navbar {
+    padding: 20px 30px;
+    overflow-x: auto;
+    /* background-image: linear-gradient(135deg, #83a4d4, #b6fbff); */
+    background-color: black;
+    margin-bottom: 0;
+    border-bottom: 1px solid #2b2b2b;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-group ul,
+.right-group ul {
+    display: flex;
+    align-items: center;
+}
+
+.navbar li.button,
+.navbar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
+    /* color: #4a4e4d; */
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.2s ease-in-out;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.site-logo-container img {
+    background-color: white;
+    border-radius: 10px;
+    width: 50px;
+    height: auto;
+}
+
+
+.icons {
+    /* display: grid; */
+    display: none;
+    grid-column: span 1;
+    grid-column-start: -1;
+    grid-template-columns: repeat(2, 32px);
+    grid-gap: 20px;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: stretch;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.disabled-icon {
+    pointer-events: none;
+    opacity: 0.2;
+}
+
+
+@media (max-width: 500px) {
+    .site-logo-container img {/*Attempt to make the logo visible on mobile*/
+        max-height: 100%;
+        width: auto;
+        margin-left: 40px;
+    }
+}
+
+nav li:not(.site-logo-container) a::after,
+nav li:not(.site-logo-container) button::after {
+    content: ''; /* Create a pseudo-element for the underline */
+    position: absolute;
+    left: 0;
+    bottom: -21px; /* Adjust this value to control the underline position */
+    width: 100%;
+    height: 2px; /* Adjust this value to control the underline thickness */
+    background-color: #146ef5; /* Set the color of the underline */
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Add transition for smooth effect */
+}
+
+nav li:not(.site-logo-container) a:hover::after,
+nav li:not(.site-logo-container) button:hover::after {
+    opacity: 1; /* Make the underline visible on hover */
+}
+
+.site-logo-container {
+    position: relative; /* Positioning the border */
+}
+
+.site-logo-container img {
+    background-color: white;
+    border-radius: 10px;
+    width: 50px;
+    height: auto;
+    transition: border-color 0.3s ease; /* Add transition for smooth effect */
+}
+
+/* Add border to the logo and transition the border-color */
+.site-logo-container:hover img {
+    border: 3px solid #146ef5; /* Set the border color */
+}
+
+.signIn {
+    background-color: #333333;
+}
+
+.signUp {
+    background-color: #146ef5;
+}
+
+@media (max-width: 500px) {
+    .site-logo-container img {
+        max-height: 100%;
+        width: auto;
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px;
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .left-group ul,
+    .right-group ul {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center;
+    }
+
+    .navbar li.button,
+    .navbar a {
+        margin-bottom: 10px; /* Add space between navbar items */
+    }
+
+    .icons {
+        margin: 20px 0; /* Adjust margin for icons on smaller screens */
+    }
+
+    .site-logo-container img {
+        margin-left: 0; /* Reset margin for logo on smaller screens */
+    }
+}

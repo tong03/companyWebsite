@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-family: 'Arial Rounded MT', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+h2 {
+  font-family: 'Arial Rounded MT', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.resizable {
+  resize: both;
+  /* Allow resizing in both directions */
+  overflow: auto;
+  /* Make the content scrollable when resized */
+  border: 1px solid #ccc;
+  /* Add a border to make the resizable area more visible */
+}
+
+
+.language-dropdown {
+  background-color: white;
+  border: 1px solid #333;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 10px;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.interview-page-elements-container {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  /* Column proportions */
+  row-gap: 0rem;
+  column-gap: 0.1rem;
+  padding: 1rem;
+  justify-content: center;
+  width: 100%;
+}
+
+
+/* challenges view */
+.challenges-tabbed-view-container {
+  grid-column: 1;
+  grid-row: 1;
+  background-color: #0e9aa7;
+  padding: 1rem;
+  border-radius: 12px;
+  color: #ffffff;
+  height: 100%;
+  min-height: 400px;
+  overflow-y: scroll;
+
+}
+
+
+.challenges-tabbed-view-header .tab {
+	background-color: #dfdfdf;
+	color: #000;
+	font-size: 16px;
+	padding: 5px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	transition: 0.3s;
+	margin-left: 2px;
+}
+
+.challenges-tabbed-view-header .selected-tab {
+	background-color: #f6cd61;
+	color: #000;
+	font-size: 16px;
+	padding: 5px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	transition: 0.3s;
+	margin-left: 2px;
+}
+
+.challenges-tabbed-view-header .tab:hover {
+  background-color: #e9b451;
+}
+
+.challenges-tabbed-view-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	border: 1px solid #fff;
+	border-radius: 10px;
+	background-color: #fff;
+	color: #333;
+	margin-top: 5px;
+}
+
+
+.code-editor-container {
+  grid-column: 2;
+  grid-row: 1;
+  background-color: #20201f;
+  padding: 5px;
+  border-radius: 12px;
+  color: #4fb59b;
+  height: 100%;
+}
+
+.conditioning-tracker-container {
+  grid-column: 1;
+  grid-row: 2;
+  background-color: #f6cd61;
+  padding: 1rem;
+  border-radius: 12px;
+  color: #4a4e4d;
+  height: 100%;
+}
+
+.chat-window-container {
+  grid-column: 2;
+  grid-row: 2;
+  background-color: white;
+  padding: 5px;
+  border-radius: 12px;
+  color: #ffffff;
+  height: 100%;
+}
+
+.checkbox-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.checkbox-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.checkbox-list input[type="checkbox"] {
+  margin-right: 1rem;
+}
+
+/*settings view*/
+.settings-view {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  width: 100%;
+  align-items: flex-start; /*This will ensure that the grid container does not stretch to fill the entire available height:*/
+}
+
+
+.settings-view h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.settings-view label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.settings-view select {
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+  color: black;
+  border: none;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.settings-view button {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.save-button {
+  background-color: #02b875;
+  color: white;
+}
+
+.cancel-button {
+  background-color: #e02020;
+  color: white;
+}
+
+.setting-note {
+  display: block;
+  margin-top: 2px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: black;
+  background-color: #f6cd61;
+  border-radius: 5px;
+  padding: 8px;
+  text-align: center;
+}
+
+.chat-history-container{
+  height: 500px; /*specifying this height allows chatscope to scroll*/
+} 
+
+/* NEBUG: LOW PRIORITY: REMOVE ALL UNUSED STYLES */
+
+/* mobile styles */
+@media (max-width: 768px) {/* For mobile phones: */
+  .interview-page-elements-container {
+    grid-template-columns: 100%; /* only one column */
+    grid-template-rows: auto auto  auto  auto; /* four rows */
+  }
+
+  .challenges-tabbed-view-container {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  .chat-window-container {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  .code-editor-container {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .conditioning-tracker-container {
+    grid-column: 1;
+    grid-row: 4;
+  }
+}
